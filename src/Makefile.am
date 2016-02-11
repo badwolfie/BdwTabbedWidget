@@ -3,13 +3,9 @@ bin_PROGRAMS = bdwtabs
 bdwtabs_SOURCES = \
 	bdwtabs.c
 
-bdwtabs_CFLAGS = \
-	$(BDWTABS_CFLAGS) \
-	$(WARN_CFLAGS) \
-	$(AM_CFLAGS)
-
-bdwtabs_LDFLAGS = \
-	$(AM_LDFLAGS)
+AM_CFLAGS = \
+	$(bdwtabs_CFLAGS) \
+	-Wall
 
 bdwtabs_LDADD = \
 	$(BDWTABS_LIBS)

@@ -38,3 +38,6 @@ src/resources.c
 src/ecced
 src/tags
 
+config.guess
+config.sub
+ltmain.sh
