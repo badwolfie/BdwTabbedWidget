@@ -16,9 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <gtk/gtk.h>
 
-gint
+int
 main (int argc, char const * argv[])
 {
   return 0;

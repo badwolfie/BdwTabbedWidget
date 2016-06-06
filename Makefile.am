@@ -1,3 +1,4 @@
-SUBDIRS = src
+SUBDIRS = \
+	src 
 
-EXTRA_DIST = autogen.sh
+EXTRA_DIST = autogen.sh 

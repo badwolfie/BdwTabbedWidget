@@ -2,22 +2,21 @@ AC_INIT([bdwtabs], 0.1)
 AC_CONFIG_SRCDIR([src])
 
 AM_INIT_AUTOMAKE([no-dist-gzip dist-bzip2])
+GNOME_MAINTAINER_MODE_DEFINES
 
+# Enable silent rules is available
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
-# Check for programs
+AM_MAINTAINER_MODE
+
+AC_PATH_PROG(GLIB_COMPILE_RESOURCES, glib-compile-resources)
+
 AC_PROG_CC
+AC_PROG_CC_STDC
+AC_PROG_INSTALL
 
-# Initialize libtool
-LT_PREREQ([2.2.6])
-LT_INIT
-
-# ***************************
-# Check for required packages
-# ***************************
-
-pkg_modules="gtk+-3.0 >= 3.14 glib-2.0 >= 2.44"
-PKG_CHECK_MODULES(BDWTABS, [$pkg_modules])
+pkg_modules="gtk+-3.0 >= 3.10"
+PKG_CHECK_MODULES(bdwtabs, [$pkg_modules])
 AC_SUBST(bdwtabs_CFLAGS)
 AC_SUBST(bdwtabs_LIBS)
 
@@ -25,6 +24,5 @@ AC_CONFIG_FILES([
 	Makefile
 	src/Makefile
 ])
-
 AC_OUTPUT
 
